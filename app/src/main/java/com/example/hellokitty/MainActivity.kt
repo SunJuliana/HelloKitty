@@ -20,8 +20,14 @@ class MainActivity : AppCompatActivity() {
         // val imageButton = findViewById<ImageButton>(R.id.imageButton)
         // или val imageButton = findViewById(R.id.imageButton) as ImageButton
 
+       // imageButton.setOnClickListener {
+       //     mHelloTextView.setText("Hello, Kitty!")
         imageButton.setOnClickListener {
-            mHelloTextView.setText("Hello, Kitty!")
+            if (editText.text.isEmpty()) {
+                textView.text = "Hello, Kitty!";
+            }else{
+                textView.text = "Привет, "+ editText.text
+            }
         }
     }
 }
